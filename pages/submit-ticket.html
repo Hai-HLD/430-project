@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RentIS — Submit a Ticket</title>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/tickets.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="home.html">RentIS</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="faq.html">FAQ</a>
+      <a href="submit-ticket.html" aria-current="page">Submit a Ticket</a>
+      <a href="my-ticket.html">My Ticket</a>
+      <details class="account-menu">
+        <summary class="account-menu-trigger">Account</summary>
+        <div class="account-menu-panel">
+          <button type="button" class="account-menu-item">Log out</button>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main class="tickets-page">
+    <h1 class="tickets-page-title">Submit a ticket</h1>
+    <p id="ticket-form-error" class="ticket-banner ticket-banner--error" hidden></p>
+    <form id="ticket-form" class="ticket-form" novalidate>
+      <div class="ticket-field">
+        <label class="ticket-label" for="ticket-topic">Topic</label>
+        <select id="ticket-topic" name="topic" required>
+          <option value="">Select a topic</option>
+          <option value="ranking">
+            Why are my listings ranked lower than other listings similar to me?
+          </option>
+          <option value="recommendations">
+            Why am I being recommended more expensive listings when there are similar ones at a lower price?
+          </option>
+          <option value="pricing">
+            Why are the pricing suggestions always lower than what I expected?
+          </option>
+          <option value="custom">Other — I have a different question</option>
+        </select>
+      </div>
+      <div id="ticket-custom-wrap" class="ticket-field" hidden>
+        <label class="ticket-label" for="ticket-custom-topic">Your question</label>
+        <textarea
+          id="ticket-custom-topic"
+          name="customTopic"
+          rows="3"
+          maxlength="2000"
+          placeholder="Describe your question in a short title or sentence."
+        ></textarea>
+      </div>
+      <div class="ticket-field">
+        <label class="ticket-label" for="ticket-description">Description</label>
+        <textarea
+          id="ticket-description"
+          name="description"
+          required
+          rows="6"
+          maxlength="8000"
+          placeholder="Add details so we can help you more effectively."
+        ></textarea>
+      </div>
+      <button type="submit" class="ticket-submit">Submit</button>
+    </form>
+  </main>
+  <script src="../js/submit-ticket.js"></script>
+</body>
+</html>

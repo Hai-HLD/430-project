@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RentIS — My tickets</title>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/tickets.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="home.html">RentIS</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="faq.html">FAQ</a>
+      <a href="submit-ticket.html">Submit a Ticket</a>
+      <a href="my-ticket.html" aria-current="page">My Ticket</a>
+      <details class="account-menu">
+        <summary class="account-menu-trigger">Account</summary>
+        <div class="account-menu-panel">
+          <button type="button" class="account-menu-item">Log out</button>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main class="tickets-page">
+    <h1 class="tickets-page-title">My tickets</h1>
+    <p id="ticket-load-error" class="ticket-banner ticket-banner--error" hidden></p>
+    <div class="ticket-layout">
+      <aside class="ticket-sidebar" aria-label="Your tickets">
+        <h2 class="ticket-sidebar-title">Tickets</h2>
+        <div id="ticket-list" class="ticket-list"></div>
+      </aside>
+      <div class="ticket-panel-wrap">
+        <div id="ticket-empty" class="ticket-empty">
+          <p>You don’t have any tickets yet.</p>
+          <p><a href="submit-ticket.html">Submit a ticket</a></p>
+        </div>
+        <div id="ticket-panel" class="ticket-panel" hidden>
+          <h2 class="ticket-thread-title" id="ticket-thread-title"></h2>
+          <p id="ticket-status-line" class="ticket-status-line" hidden></p>
+          <div id="ticket-thread" class="ticket-thread"></div>
+          <form id="ticket-reply-form" class="ticket-reply-form" aria-label="Reply to this ticket">
+            <label class="ticket-label" for="ticket-reply-text">Your message</label>
+            <textarea
+              id="ticket-reply-text"
+              name="content"
+              rows="3"
+              maxlength="8000"
+              required
+              placeholder="Write a follow-up message to support."
+            ></textarea>
+            <div class="ticket-reply-footer">
+              <div class="ticket-reply-actions-end">
+                <p id="ticket-reply-error" class="ticket-reply-error" role="alert" hidden></p>
+                <button type="submit" class="ticket-submit">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/tickets-shared.js"></script>
+  <script src="../js/my-ticket.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+main.faq-page {
+  max-width: 1120px;
+}
+
+.faq-page-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-sidebar {
+  position: sticky;
+  top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 720px) {
+  .faq-sidebar {
+    position: static;
+  }
+}
+
+.faq-tablist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.faq-tab {
+  width: 100%;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: left;
+  color: #333;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.faq-tab:hover,
+.faq-tab:focus-visible {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.faq-tab:focus-visible {
+  outline: 2px solid #0d47a1;
+  outline-offset: 2px;
+}
+
+.faq-tab[aria-selected="true"] {
+  background: #e3f2fd;
+  color: #0d47a1;
+  border-color: #90caf9;
+}
+
+.faq-cta {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d47a1;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.faq-cta:hover,
+.faq-cta:focus-visible {
+  text-decoration: underline;
+}
+
+.faq-cta:focus-visible {
+  outline: 2px solid #0d47a1;
+  outline-offset: 4px;
+}
+
+.faq-content {
+  padding: 1.25rem 1.35rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  min-height: 12rem;
+}
+
+.faq-panel {
+  display: none;
+}
+
+.faq-panel.is-active {
+  display: block;
+}
+
+.faq-panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.faq-panel p {
+  margin: 0 0 0.85rem;
+  font-size: 0.975rem;
+  color: #424242;
+}
+
+.faq-panel p:last-child {
+  margin-bottom: 0;
+}

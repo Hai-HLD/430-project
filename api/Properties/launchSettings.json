@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "RentIS.Api": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "index.html",
+      "applicationUrl": "http://localhost:5050"
+    }
+  }
+}

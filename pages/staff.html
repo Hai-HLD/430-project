@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RentIS Staff — Tickets</title>
+  <link rel="stylesheet" href="../css/staff.css">
+</head>
+<body class="staff-body">
+  <header class="staff-app-header">
+    <div class="staff-brand">RentIS <span class="staff-badge">Staff</span></div>
+  </header>
+  <main class="staff-main">
+    <h1 class="staff-main-title">Support queue</h1>
+    <p id="staff-load-error" class="staff-banner" hidden></p>
+    <div class="staff-layout">
+      <aside class="staff-sidebar" aria-label="Tickets by number">
+        <h2 class="staff-sidebar-title">Tickets</h2>
+        <div id="staff-ticket-list" class="staff-ticket-list"></div>
+      </aside>
+      <div class="staff-content">
+        <div id="staff-empty" class="staff-empty">
+          <p>No tickets in the queue.</p>
+        </div>
+        <div id="staff-panel" class="staff-panel" hidden>
+          <div class="staff-ticket-header">
+            <div class="staff-topic-row">
+              <p class="staff-topic" id="staff-topic"></p>
+              <span id="staff-status-badge" class="staff-status-badge" hidden></span>
+            </div>
+          </div>
+          <div id="staff-thread" class="staff-thread"></div>
+          <form id="staff-reply-form" class="staff-reply-form" aria-label="Reply as support">
+            <label class="staff-label" for="staff-reply-text">Staff reply</label>
+            <textarea
+              id="staff-reply-text"
+              name="content"
+              rows="3"
+              maxlength="8000"
+              required
+              placeholder="Type your reply to the customer."
+            ></textarea>
+            <div class="staff-reply-footer">
+              <button type="button" id="staff-close-ticket" class="staff-btn-close">
+                Close ticket
+              </button>
+              <div class="staff-reply-end">
+                <p id="staff-reply-error" class="staff-reply-error" role="alert" hidden></p>
+                <button type="submit" class="staff-btn-send">Send reply</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/staff.js"></script>
+</body>
+</html>

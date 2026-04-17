@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RentIS — FAQ</title>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/faq.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="home.html">RentIS</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="faq.html" aria-current="page">FAQ</a>
+      <a href="submit-ticket.html">Submit a Ticket</a>
+      <a href="my-ticket.html">My Ticket</a>
+      <details class="account-menu">
+        <summary class="account-menu-trigger">Account</summary>
+        <div class="account-menu-panel">
+          <button type="button" class="account-menu-item">Log out</button>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main class="faq-page">
+    <h1 class="faq-page-title">Frequently asked questions</h1>
+    <div class="faq-layout">
+      <aside class="faq-sidebar">
+        <div
+          class="faq-tablist"
+          role="tablist"
+          aria-label="FAQ topics"
+          aria-orientation="vertical"
+        >
+          <button
+            type="button"
+            class="faq-tab"
+            role="tab"
+            id="tab-ranking"
+            aria-selected="true"
+            aria-controls="panel-ranking"
+          >
+            Why are my listings ranked lower than other listings similar to me?
+          </button>
+          <button
+            type="button"
+            class="faq-tab"
+            role="tab"
+            id="tab-recommendations"
+            aria-selected="false"
+            aria-controls="panel-recommendations"
+            tabindex="-1"
+          >
+            Why am I being recommended more expensive listings when there are similar ones at a lower price?
+          </button>
+          <button
+            type="button"
+            class="faq-tab"
+            role="tab"
+            id="tab-pricing"
+            aria-selected="false"
+            aria-controls="panel-pricing"
+            tabindex="-1"
+          >
+            Why are the pricing suggestions always lower than what I expected?
+          </button>
+        </div>
+        <a class="faq-cta" href="submit-ticket.html">
+          Didn’t find what you’re looking for? Submit a ticket
+        </a>
+      </aside>
+      <div class="faq-content">
+        <article
+          class="faq-panel is-active"
+          role="tabpanel"
+          id="panel-ranking"
+          aria-labelledby="tab-ranking"
+        >
+          <h2>Why are my listings ranked lower than other listings similar to me?</h2>
+          <p>
+            Rankings combine several signals—not only price and location. Completeness of your listing,
+            how recently it was updated, response time to inquiries, guest feedback, and policy
+            compliance can all influence placement. Similar listings may rank higher if they are more
+            complete, more actively managed, or better match what searchers are selecting in filters.
+          </p>
+        </article>
+        <article
+          class="faq-panel"
+          role="tabpanel"
+          id="panel-recommendations"
+          aria-labelledby="tab-recommendations"
+          hidden
+        >
+          <h2>Why am I being recommended more expensive listings when there are similar ones at a lower price?</h2>
+          <p>
+            Recommendations are not sorted by price alone. The system may weigh availability, match to
+            your stated preferences, historical booking success, distance, amenities, and quality or
+            trust signals. In some cases a higher-priced option may look like a better overall match for
+            the criteria being used—even when a cheaper listing appears superficially similar.
+          </p>
+        </article>
+        <article
+          class="faq-panel"
+          role="tabpanel"
+          id="panel-pricing"
+          aria-labelledby="tab-pricing"
+          hidden
+        >
+          <h2>Why are the pricing suggestions always lower than what I expected?</h2>
+          <p>
+            Suggested prices are typically modeled from recent market transactions, seasonality, and
+            comparable listings. Models often lean conservative to reflect observable demand rather than
+            an aspirational rate, which can feel “low” if you’re comparing to peak-season peaks or
+            informal word-of-mouth comps.
+          </p>
+          <p>
+            Suggestions are guidance, not a guarantee of what you will earn; your final price remains
+            your decision. More granular explanations of the inputs used for your property will be linked
+            from this portal as those reports become available.
+          </p>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="../js/faq.js" defer></script>
+</body>
+</html>
